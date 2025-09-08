@@ -1,0 +1,22 @@
+{
+    "name": "@ludeschersoftware/list",
+    "version": "1.0.0",
+    "description": "A lightweight, strongly-typed collection class for TypeScript that extends native array functionality with a rich set of utility methods",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ludeschersoftware/JList.git"
+    },
+    "keywords": [
+        "list"
+    ],
+    "author": "Johannes Ludescher",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ludeschersoftware/JList/issues"
+    },
+    "homepage": "https://github.com/ludeschersoftware/JList#readme"
+}
