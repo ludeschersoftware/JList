@@ -22,6 +22,10 @@
             "DOM",
             "ESNext"
         ],
+        "types": [
+            "jest",
+            "node"
+        ],
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
         "exactOptionalPropertyTypes": true,

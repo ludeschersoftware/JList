@@ -41,7 +41,11 @@ class List<T> {
         return this;
     }
 
-    public AddRange(items: T[]): this {
+    public AddRange(items: T[] | undefined): this {
+        if (!items) {
+            return this;
+        }
+
         this.m_items.push(...items);
 
         return this;

@@ -2,9 +2,23 @@
     "name": "@ludeschersoftware/list",
     "version": "1.0.0",
     "description": "A lightweight, strongly-typed collection class for TypeScript that extends native array functionality with a rich set of utility methods",
+    "publishConfig": {
+        "access": "public"
+    },
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "tsc --project tsconfig.json",
+        "watch": "tsc --watch",
+        "test": "jest --passWithNoTests",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage"
+    },
+    "types": "index.ts",
+    "exports": {
+        ".": {
+            "import": "./index.js",
+            "types": "./index.ts"
+        }
     },
     "repository": {
         "type": "git",
@@ -18,5 +32,25 @@
     "bugs": {
         "url": "https://github.com/ludeschersoftware/JList/issues"
     },
-    "homepage": "https://github.com/ludeschersoftware/JList#readme"
+    "homepage": "https://github.com/ludeschersoftware/JList#readme",
+    "devDependencies": {
+        "@types/babel__core": "^7.20.5",
+        "@types/babel__generator": "^7.27.0",
+        "@types/babel__template": "^7.4.4",
+        "@types/babel__traverse": "^7.20.7",
+        "@types/istanbul-lib-coverage": "^2.0.6",
+        "@types/istanbul-lib-report": "^3.0.3",
+        "@types/istanbul-reports": "^3.0.4",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^24.0.10",
+        "@types/stack-utils": "^2.0.3",
+        "@types/yargs": "^17.0.33",
+        "@types/yargs-parser": "^21.0.3",
+        "jest": "^30.0.4",
+        "jest-environment-jsdom": "^30.0.4",
+        "jsdom": "^26.1.0",
+        "ts-jest": "^29.4.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.2"
+    }
 }
