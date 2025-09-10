@@ -342,4 +342,26 @@ describe('List<T>', () => {
         const first = list.First();
         expect(first).toBe(10);
     });
+
+    test('Iterate yields items in order', () => {
+        const result: number[] = [];
+        for (const item of list.Iterate()) {
+            result.push(item);
+        }
+        expect(result).toEqual([1, 2, 3]);
+    });
+
+    test('IterateReverse yields items in reverse order', () => {
+        const result: number[] = [];
+        for (const item of list.IterateReverse()) {
+            result.push(item);
+        }
+        expect(result).toEqual([3, 2, 1]);
+    });
+
+    test('IterateReverse on empty list yields nothing', () => {
+        const empty = new List<number>();
+        const result = Array.from(empty.IterateReverse());
+        expect(result).toEqual([]);
+    });
 });

@@ -8,7 +8,7 @@ A lightweight, strongly-typed collection class for TypeScript that extends nativ
 - 🔄 **Modification**: `Add`, `AddRange`, `Insert`, `Remove`, `RemoveAll`, `RemoveAt`, `Clear`, `Reverse`
 - 🧠 **Custom Equality**: Pass a comparer function for deep equality or custom logic
 - 🔁 **Iteration**: Fully iterable with `for...of` and generator support
-- 🧪 **Functional Utilities**: `First`, `Last`, `FirstOrDefault`, `LastOrDefault`, `ForEach`, `Clone`, `ToArray`
+- 🧪 **Functional Utilities**: `First`, `Last`, `FirstOrDefault`, `LastOrDefault`, `ForEach`, `Clone`, `ToArray`, `IterateReverse`
 - 🧼 **Transformations**: `Distinct`, `Sort`, `Select`, `Where`
 - ✅ **100% Test Coverage**: Built with Jest and tested across all branches, edge cases, and behaviors
 
@@ -40,6 +40,12 @@ numbers.Add(5).Remove(2);
 const evens = numbers.Where(n => n % 2 === 0);
 
 console.log(evens.ToArray()); // [4]
+
+const layers = new List<string>(['Background', 'Midground', 'Foreground']);
+
+for (const layer of layers.IterateReverse()) {
+    console.log(layer); // Foreground, Midground, Background
+}
 ```
 
 ---
@@ -103,6 +109,9 @@ yarn test:coverage
 | `ForEach(callback)` | Executes callback for each item                  |
 | `ToArray()`         | Returns a shallow copy of the list               |
 | `Clone()`           | Returns a deep copy of the list                  |
+| `Items()`           | Lazily iterates items in order                   |
+| `Iterate()`         | Lazily iterates items in order                   |
+| `IterateReverse()`  | Lazily iterates items in reverse order           |
 
 ---
 

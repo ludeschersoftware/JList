@@ -28,9 +28,19 @@ class List<T> {
         yield* this.m_items;
     }
 
+    public *Iterate(): Generator<T> {
+        yield* this.m_items;
+    }
+
+    public *IterateReverse(): Generator<T> {
+        for (let i = this.m_items.length - 1; i >= 0; i--) {
+            yield this.m_items[i];
+        }
+    }
+
     public [Symbol.iterator](): Iterator<T> {
         return this.Items();
-    }
+    };
 
     // ------------------------
     // Modification

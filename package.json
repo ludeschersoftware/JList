@@ -1,6 +1,6 @@
 {
     "name": "@ludeschersoftware/list",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "A lightweight, strongly-typed collection class for TypeScript that extends native array functionality with a rich set of utility methods",
     "publishConfig": {
         "access": "public"
